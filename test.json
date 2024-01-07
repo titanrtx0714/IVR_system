@@ -1,0 +1,36 @@
+{
+  "content": "To inquire about the lecture schedule, press number 1, to inquire about the exam schedule, press number 2, and to inquire about grades, press number 3.",
+  "1": {
+    "content": "Hope you are doing well, press number 1, to inquire about the lecture time, press number 2, and to inquire about who will conduct the lecture, press number 3.",
+    "1": {
+      "content": "Hello! How are you? Today I want to tell you three stories from my life."
+    },
+    "2": {
+      "content": "Hope you are doing well. I am honored to be with you today."
+    },
+    "3": {
+      "content": "Hi there! Good morning"
+    }
+  },
+  "2": {
+    "content": "Hello How are you?, press number 1, to inquire about the exam time, press number 2, and to inquire about the test proctor, press number 3.",
+    "1": {
+      "content": "Almost done, now we can start from scratch. Please believe me."
+    },
+    "2": {
+      "content": "When are you going to start the test project? I want you to tell me problems about the job."
+    }
+  },
+  "3": {
+    "content": "To inquire about the test subject, press number 1, to inquire about the exam time, press number 2, and to inquire about the test proctor, press number 3.",
+    "1": {
+      "content": "Welcome TCTV students! Your project is under development."
+    },
+    "2": {
+      "content": "You can reach Wajas team for your support."
+    },
+    "3": {
+      "content": "Call this number for support: 0548017059"
+    }
+  }
+}

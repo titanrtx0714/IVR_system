@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Voice Messages</title>
+</head>
+<body>
+    <h1>Dynamic Voice Messages</h1>
+
+    <form id="addMessageForm" onsubmit="submitForm(event)">
+        <label for="stage">Stage:</label>
+        <input type="text" id="stage" required>
+        <label for="number">Number:</label>
+        <input type="text" id="number" required>
+        <label for="content">Message Content:</label>
+        <input type="text" id="content" required>
+        <button type="button" onclick="addMessage()">Add Message</button>
+        <button type="submit">Submit Messages</button>
+    </form>
+
+    <h2>Messages</h2>
+    <ul id="messagesList">
+        <!-- Existing messages will be displayed here -->
+    </ul>
+
+    <script>
+        // Array to store messages on the client side
+        var clientMessages = [];
+
+        // JavaScript function to add messages to the list
+        function addMessage() {
+            var stage = document.getElementById('stage').value;
+            var number = document.getElementById('number').value;
+            var content = document.getElementById('content').value;
+
+            // Store the message in the clientMessages array
+            clientMessages.push({ stage, number, content });
+
+            // Create a new list item
+            var listItem = document.createElement('li');
+            listItem.textContent = 'Stage ' + stage + ', Number ' + number + ': ' + content;
+
+            // Append the new list item to the messages list
+            document.getElementById('messagesList').appendChild(listItem);
+
+            // Clear the form fields
+            document.getElementById('stage').value = '';
+            document.getElementById('number').value = '';
+            document.getElementById('content').value = '';
+        }
+
+        // JavaScript function to submit the form and send messages to the server
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Send the messages to the server using AJAX
+            fetch('/submit_messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ clientMessages }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Server Response:', data);
+                // Optionally, reset the clientMessages array
+                clientMessages = [];
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

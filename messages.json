@@ -1,0 +1,24 @@
+{
+  "content": "Welcome. this is the language step. To English press number 1, To France presss number 2,  To Japan press number 3.",
+  "1": {
+    "content": "To explain press number 1, To test press number 2,  To join press number 3, To go back, press the number 0.",
+    "1": {
+      "content": "Welcome TCTV students! Your project is under development."
+    },
+    "2": {
+      "content": "you can reach Wajas team for your support"
+    },
+    "3": {
+      "content": "Call this number for support 0548017059"
+    }
+  },
+  "2": {
+    "content": "To invite press number 1, To discuss press number 2,  To join group press number 3, To go back, press the number 0.",
+    "1": {                                                                                                                                                                                      
+      "content": "It would all work out OK."
+    },
+    "2": {
+      "content": "I believe you. this is the test content."
+    }
+  }
+}
